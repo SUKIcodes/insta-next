@@ -1,5 +1,6 @@
 import React from "react";
 import { HiOutlineDotsVertical } from "react-icons/hi";
+import LikeSection from "./LikeSection";
 
 export default function Post({ post }) {
   return (
@@ -14,7 +15,7 @@ export default function Post({ post }) {
         <HiOutlineDotsVertical className="cursor-pointer h-5" />
       </div>
       <img src={post.image} alt="image" className="object-cover w-full p-2" />
-
+      <LikeSection id={post.id} />
       <p className="p-5 truncate ">
         <span className="font-bold mr-2">{post.username}</span>
         {post.caption}
